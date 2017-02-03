@@ -1,7 +1,12 @@
 # vestacp-nextcloud-template
 Web templates for Vesta Control Panel to run Nextcloud or Owncloud under Apache. Works with nginx proxy too. 
 
-Download these files into /usr/local/vesta/data/templates/web/apache2
+Download these files into /usr/local/vesta/data/templates/web/apache2 eg. 
+```
+cd /usr/local/vesta/data/templates/web/apache2
+wget https://raw.githubusercontent.com/plutocrat/vestacp-nextcloud-template/master/nextcloud.tpl
+wget https://raw.githubusercontent.com/plutocrat/vestacp-nextcloud-template/master/nextcloud.stpl
+```
 
 Then select them from the Control Panel > Domains > Domainname.com > Templates
 
