@@ -30,7 +30,19 @@
     <IfModule itk.c>
         AssignUserID %user% %group%
     </IfModule>
-
+    <IfModule mod_env.c>
+    # Add security and privacy related headers
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set X-Robots-Tag "none"
+    Header set X-Download-Options "noopen"
+    Header set X-Permitted-Cross-Domain-Policies "none"
+    Header set Referrer-Policy "no-referrer"
+    SetEnv modHeadersAvailable true
+  </IfModule>
+  <IfModule mod_headers.c>
+      Header always set Strict-Transport-Security "max-age=15552000; includeSubDomains"
+   </IfModule>
     IncludeOptional %home%/%user%/conf/web/%web_system%.%domain%.conf*
 
 </VirtualHost>
