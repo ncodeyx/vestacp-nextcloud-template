@@ -9,6 +9,7 @@ wget https://raw.githubusercontent.com/plutocrat/vestacp-nextcloud-template/mast
 ```
 
 Then select them from the Control Panel > Domains > Domainname.com > Templates
+Make sure to enable the Apache headers module using `a2enmod headers` or else Apache will not start.
 
 If you have enabled SSL, then also put this in your .htaccess file, which will force an SSL connection. 
 
